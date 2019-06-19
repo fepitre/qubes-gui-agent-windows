@@ -1,6 +1,6 @@
 OUTDIR = bin/$(ARCH)
 INCLUDES = -Iinclude/mingw -Iinclude
-CFLAGS += $(INCLUDES) -std=c11 -fgnu89-inline -DUNICODE -D_UNICODE -DWINVER=0x0600
+CFLAGS += $(INCLUDES) -std=c11 -fgnu89-inline -DUNICODE -D_UNICODE -DWINVER=0x0600 -mwindows
 LDFLAGS += -L$(OUTDIR) -lwindows-utils
 
 all: $(OUTDIR) $(OUTDIR)/qga.exe $(OUTDIR)/QgaWatchdog.exe $(OUTDIR)/create-device.exe $(OUTDIR)/disable-device.exe $(OUTDIR)/qvgdi.dll $(OUTDIR)/qvmini.sys $(OUTDIR)/qvideo.inf $(OUTDIR)/pkihelper.exe
